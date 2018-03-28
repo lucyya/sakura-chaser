@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <title>Blossom Chaser</title>
+  <title>Sakura Chaser - a Japanese cherry blossom guide</title>
   <meta name="description" content="A guide for Japanese cherry blossoms with maps and tourist attractions">
   <meta name="author" content="Lucy Lu | NYU">
 
@@ -17,15 +17,15 @@
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/grid.css">
   <link rel="stylesheet" href="css/style.css">
-    
 
-    <script src="js/modernizr-2.6.2.min.js"></script>
+  <script src="js/modernizr-2.6.2.min.js"></script>
     
 </head>
 <body>
 
   <header class="clearfix">
-    <h1>Cherry Chaser</h1>
+    <img src="./img/logo.svg"> 
+    <h1>Sakura Chaser</h1>
     <nav class="clearfix">
       <ul>
         <li id="active"><a href="index.html">Home</a></li>
@@ -44,39 +44,36 @@
   </header>
 
   <div class="landing clearfix">
-    <figcaption>
-      <h2>CHASE THE CHERRY</h2>
-      <h1>Blossom</h1>
-      <h3>Japanese cherry blossom guide</h3>
-    </figcaption>
+    <div>
+      <svg viewbox="0 0 100 50">
+        <defs>
+          <mask id="mask" x="0" y="0" width="100" height="100">
+            <rect x="0" y="0" width="100" height="50" fill="#fff" />
+            <text text-anchor="middle" x="65" y="17" id="h2">CHASE THE CHERRY</text>
+            <text text-anchor="middle" x="50" y="32" id="h1">Blossom</text>
+            <text text-anchor="middle" x="50" y="45" id="h3">Japanese cherry blossom guide</text>
+          </mask>
+        </defs>
+        <rect x="0" y="0" width="100" height="100" mask="url(#mask)" fill="white"/>
+      </svg>
+    </div>
   </div>
 
   <div class="map clearfix">
     <figcaption>
-      <h2>C H E R R Y &nbsp;&nbsp;&nbsp;B L O S S O M</h2>
+      <h2>E X P L O R E &nbsp;&nbsp;&nbsp;T H E &nbsp;&nbsp;&nbsp;P E R F E C T &nbsp;&nbsp;&nbsp;P L A C E &nbsp;&nbsp;&nbsp;O N</h2>
       <h1>Map of Japan</h1>
       <div><a href="map.html">E X P L O R E</a></div>
     </figcaption>
-    <div>
-      <a href="attractions.html" class="icon" id="sapporo"><img src="img/icon_bud.png"></a>
-      <a href="attractions.html" class="icon" id="sendai"><img src="img/icon_bud.png"></a>
-      <a href="attractions.html" class="icon" id="kanazawa"><img src="img/icon_bud.png"></a>
-      <a href="tokyo.html" class="icon" id="tokyo"><img src="img/icon_bud.png"></a>
-      <a href="attractions.html" class="icon" id="nagoya"><img src="img/icon_bud.png"></a>
-      <a href="kyoto.html" class="icon" id="kyoto"><img src="img/icon_bud.png"></a>
-      <a href="osaka.html" class="icon" id="osaka"><img src="img/icon_bud.png"></a>
-      <a href="attractions.html" class="icon" id="matsuyama"><img src="img/icon_bud.png"></a>
-      <a href="attractions.html" class="icon" id="hiroshima"><img src="img/icon_bud.png"></a>
-      <a href="attractions.html" class="icon" id="fukuoka"><img src="img/icon_flower.png"></a>
-      <a href="attractions.html" class="icon" id="naha"><img src="img/icon_leaf.png"></a>
-    </div>
   </div>
 
+  <img src="./img/map-background.jpg" alt="map of Japan" id="map">
+
   <div class="sites clearfix">
-    <div class="wrapper">
-      <h2>CHERRY BLOSSOME SEASON</h2>
-      <h1>Major Tourist Sites</h1>      
-      <div class="major">
+    <div class="wrapper clearfix">
+      <h2>C H E R R Y &nbsp;&nbsp;&nbsp;B L O S S O M &nbsp;&nbsp;&nbsp;S E A S O N</h2>
+      <h1>Major tourist sites</h1>      
+      <div class="major clearfix">
         <h2>Major Cites</h2>
         <ul>
           <li><a href="attractions.html#tokyo">TOKYO</a></li>
@@ -84,7 +81,7 @@
           <li><a href="attractions.html#osaka">OSAKA</a></li>
         </ul>
       </div>
-      <div class="others">
+      <div class="others clearfix">
         <h2>Others</h2>
         <div>
           <h3>Kyushu, Shikoku and Chugoku</h3>
@@ -128,6 +125,7 @@
 
   <footer>
     <p>Copyright © 2018. All Rights Reserved.</p>
+    <a href="http://wp.nyu.edu/lucylu">Website crafted by Lucy Lu</a>
   </footer>
 
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
