@@ -1,0 +1,120 @@
+var data = {
+    "regions": [
+        {
+            "region":"Kyushu, Shikoku and Chugoku",
+            "cities":[
+                {
+                    "link":"",
+                    "name":"FUKUOKA",
+                    "estimated":"April 1 to April 7",
+                    "start":"March 25"
+                },
+                {
+                    "link": "",
+                    "name":"KUMAMOTO",
+                    "estimated":"March 29 to April 5",
+                    "start":"March 24"
+                },
+                {
+                    "link": "#hiroshima",
+                    "name":"HIROSHIMA",
+                    "estimated":"April 4 to April 10",
+                    "start":"March 27"
+                },
+                {
+                    "link": "",
+                    "name":"MATSUYAMA",
+                    "estimated":"April 1 to April 7",
+                    "start":"March 24"
+                }
+            ]
+        },
+        {
+            "region": "Tohoku and Hokkaido",
+            "cities": [
+                {
+                    "link": "",
+                    "name": "FUKUSHIMA",
+                    "estimated": "April 8 to April 14",
+                    "start": "April 6"
+                },
+                {
+                    "link": "",
+                    "name": "SENDAI",
+                    "estimated": "April 7 to April 13",
+                    "start": "April 7"
+                },
+                {
+                    "link": "",
+                    "name": "HAKODATE",
+                    "estimated": "April 29 to May 4",
+                    "start": "April 27"
+                },
+                {
+                    "link": "",
+                    "name": "SAPPORO",
+                    "estimated": "May 2 to May 8",
+                    "start": "May 1"
+                }
+            ]
+        },
+        {
+            "region":"Kansai",
+            "cities":[
+                {
+                    "link": "#kyoto",
+                    "name":"KYOTO",
+                    "estimated":"April 5 to April 11",
+                    "start":"March 31"
+                },
+                {
+                    "link": "#osaka",
+                    "name":"OSAKA",
+                    "estimated":"April 5 to April 11",
+                    "start":"April 1st"
+                },
+                {
+                    "link": "#nara",
+                    "name":"NARA",
+                    "estimated":"April 6 to April 12",
+                    "start":"April 3"
+                }
+            ]
+        },
+        {
+            "region":"Kanto and Chubu",
+            "cities":[
+                {
+                    "link": "tokyo",
+                    "name": "TOKYO",
+                    "estimated": "March 29 to April 4",
+                    "start": "March 21"
+                },
+                {
+                    "link": "",
+                    "name":"NAGOYA",
+                    "estimated":"April 8 to April 14",
+                    "start":"April 5"
+                },
+                {
+                    "link": "",
+                    "name":"YOKOHAMA",
+                    "estimated":"April 3 to April 9",
+                    "start":"March 25"
+                },
+                {
+                    "link": "",
+                    "name":"KANAZAWA",
+                    "estimated":"April 8 to April 14",
+                    "start":"April 5"
+                },
+                {
+                    "link": "#lake",
+                    "name":"FUJI FIVE LAKES",
+                    "estimated":"March 31 to April 6",
+                    "start": "March 25"
+                }
+            ]
+        }
+    ]
+}

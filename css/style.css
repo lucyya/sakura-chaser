@@ -7,21 +7,7 @@ Copyright 2013, Josh Cope
    Site Styles
    ========================================================================== */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: block;
-    visibility: hidden;
-}
-
 html, body {
-    margin: 0;
     position: relative;
     overflow-x: hidden;
 }
@@ -34,76 +20,59 @@ body {
     height: 100vh;
 }
 
-div {
-    min-height: 50px;
-}
-
-header {
-    width: 100%;
+nav {
     height: 10vh;
-    background-color: white;
+    font-size: 1vmax;
 }
 
-header img {
-    height: 9vh;
-    margin-top: -3vh;
-    margin-left: 50px;
+nav img {
+    height: 9vmin;
+    margin-left: 3vw;
 }
 
-header h1 {
+nav h3 {
     display: inline-block;
     color: plum;
-    margin: 0 1vw;
-    font-size: 50px;
-    font-weight: bold;
-    line-height: 10vh;
-}
+    margin-left: 2vw;
+    font-size: 7vmin;
+} 
 
-header nav {
-    float: right;
-    width: 40vw;
-    margin-top: 1.5vh;
-}
-
-header li {
-    display: inline-block;
-    line-height: 7.5vh;
-    width: 30%;
-    transition: all 1s;
-}
-
-header li:hover {
-    background-color: rgba(0, 0, 0, 0.15);
-}
-
-header a {
-    text-align: center;
-    display: block;
-    text-decoration: none;
+.navbar-light .navbar-nav .nav-link {
     color: orchid;
-    font-size: 20px;
+    line-height: 3vh;
 }
 
-header li:hover ul.attractions {
-    display: block;
+.navbar-light .navbar-nav .active .nav-link{
+    color: orchid;
+    line-height: 3vh;
 }
 
-header ul.attractions {
-    display: none;
-    position: absolute;
-    width: 12%;
-    z-index: 1;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    background-color: rgba(255, 255, 255, 0.9);
-}
-
-header ul.attractions li {
-    display: block;
-    width: 100%;
-}
-
-#active {
+.active {
     border-bottom: 3px solid orchid;
+}
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+    color: orchid;
+    line-height: 3vh;
+}
+
+.navbar-light .navbar-nav .show>.nav-link {
+    color: orchid;
+    line-height: 3vh;
+}
+
+.dropdown-menu {
+    min-width: 10rem;
+}
+
+.dropdown-item {
+    color: orchid;
+    transition: all 1s;
+    line-height: 3vh;
+}
+
+.dropdown-item:hover {
+    background-color: rgba(0, 0, 0, 0.15);
 }
 
 figcaption {
@@ -114,26 +83,66 @@ figcaption {
 }
 
 footer {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), transparent);
-    height: 10vh;
-    width: 100vw;
-    padding: 2vh 5%;
-    position: absolute;
-    top: 300vh;
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    height: 50vh;
+    color: whitesmoke;
+}
+
+footer h1 {
+    font-size: 8vmin;
+    margin-top: 5vh;
+    color: lavenderblush;
 }
 
 footer p {
-    display: inline-block;
-    color: whitesmoke;
-    font-weight: lighter;
+    font-size: 1.5vmin;
+    color: lavenderblush;
+}
+
+input[type="text"], input[type="email"] {
+    height: 2.5vmax;
+    width: 20vmax;
+    background-color: transparent;
+    font-size: 2vmin;
+    color: lavenderblush;
+    box-shadow: none;
+    border: none;
+    border-bottom: 1px solid white;
+}
+
+input[type="text"]:focus, input[type="email"]:focus {
+    background-color: transparent;
+    font-size: 2.5vmin;
+    color: lavenderblush;
+}
+
+footer button {
+    height: 4vmax;
+    width: 12vmax;
+}
+
+.btn {
+    border-radius: 50px;
+    font-size: 2vmin;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: lavenderblush;
+}
+
+input[type="text"]::-webkit-input-placeholder, input[type="email"]::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: lavenderblush;
+}
+
+input[type="text"]::-moz-placeholder, input[type="email"]::-moz-placeholder { /* Firefox 19+ */
+    color: lavenderblush;
+}
+
+input[type="text"]:-ms-input-placeholder, input[type="email"]:-ms-input-placeholder { /* IE 10+ */
+    color: lavenderblush;
 }
 
 footer a {
-    float: right;
     text-decoration: none;
     color: whitesmoke;
-    font-weight: lighter;
-    line-height: 50px;
 }
 
 /* =============================================================================
@@ -141,22 +150,15 @@ footer a {
    ========================================================================== */
 
 .landing {
-    height: 100vh;
-    position: relative;
-    top: -10vh;
-    z-index: -1;
+    height: 90vh;
+    /* z-index: -1; */
 }
 
 .landing div {
-    border: 40px solid white;
+    border: 4vmax solid white;
+    border-top: none;
     height: 100%;
-    border-top: 10vh solid white;
-    padding: 2%;
-}
-
-.landing svg {
-    width: 100%;
-    height: 100%;
+    padding: 4vmax;
 }
 
 .landing #h2 {
@@ -177,51 +179,38 @@ footer a {
 .map {
     background: radial-gradient( rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.8));
     height: 100vh;
-    position: relative;
-    top: -10vh;
 }
 
 .map figcaption {
+    padding-top: 30vh;
     position: relative;
     z-index: 5;
-    height: 100%;
-    width: 100%;
     background-image: linear-gradient(to right, purple, hotpink);
+    /* -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    background-clip: text; */
 }
 
 .map h2 {
-    margin-top: 30vh;
-    font-size: 30px;
-    text-align: center;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
-    background-clip: text;
+    font-size: 3.5vmin;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
 }
 
 .map h1 {
-    font-size: 150px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    text-align: center;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
-    background-clip: text;
+    font-size: 11vmax;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
-    margin-top: -1%;
+    margin-top: -1vh;
 }
 
 .map div {
     border-radius: 50px;
-    height: 80px;
-    width: 250px;
+    height: 9vmin;
+    width: 30vmin;
     background-color: rgba(255, 255, 255, 0.2);
     box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.2);
-    display: block;
-    margin: 0 auto;
     margin-top: 3vh;
-    padding: 7px;
+    padding: 0.5vmin;
     transition: all 1s;
 }
 
@@ -230,13 +219,11 @@ footer a {
 }
 
 .map a {
-    font-weight: bold;
-    text-align: center;
+    font-weight: 600;
     display: block;
-    text-decoration: none;
-    font-size: 22px;
-    line-height: 60px;
-    border: 3px solid plum;
+    font-size: 2.5vmin;
+    line-height: 7vmin;
+    border: 0.4vmin solid plum;
     border-radius: 50px;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -246,7 +233,7 @@ footer a {
 
 #map {
     position: absolute;
-    right: -22vw;
+    right: -35vmin;
     top: 100vh;
     height: 100vh;
     mask-image: url("../img/japan-map.svg");
@@ -258,91 +245,89 @@ footer a {
 }
 
 .sites {
-    background: url("../img/attractions.jpg") no-repeat bottom center;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), transparent), url("../img/attractions.jpg");
+    background-position: bottom center;
     background-size: cover;
     height: 100vh;
-    position: relative;
-    top: -10vh;
-}
-
-.sites .wrapper {
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.3), transparent);
-    height: 100%;
-    padding: 5%;
 }
 
 .sites h2 {
-    color: rgba(255, 240, 245, 0.9);
-    font-size: 30px;
-    font-weight: 500;
+    padding-top: 25vh;
+    color: lavenderblush;
+    font-size: 3.5vmin;
+    font-weight: 300;
 }
 
 .sites h1 {
     color: lavenderblush;
-    font-size: 85px;
-    margin-bottom: 3vh;
+    font-size: 7vmax;
+    font-weight: 400;
     margin-top: -2vh;
 }
 
-.sites .major h2,
-.sites .others h2 {
-    color: lavenderblush;
-    margin-top: 1vh;
+.sites input, .sites button {
+    height: 4.5vmax;
+    margin-top: 5vh;
 }
 
-.sites ul {
-    display: block;
+.sites input[type="search"] {
+    font-size: 2vmax;
+    font-weight: 300;
+    color: lavenderblush;
+}
+
+.sites input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: lavenderblush;
+}
+
+.sites input::-moz-placeholder { /* Firefox 19+ */
+  color: lavenderblush;
+}
+
+.sites input:-ms-input-placeholder { /* IE 10+ */
+  color: lavenderblush;
+}
+
+.sites input[type="search"], textarea {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.sites button {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: lavenderblush;
+}
+
+.sites span {
+    font-size: 1.5vmax;
+    transition: none;
+}
+
+.sites .cities {
+    color: lavender;
+    margin-top: 1vh;
+    font-weight: 400;
+    font-size: 2vmax;
 }
 
 .sites li {
-    display: inline-block;
-    line-height: 6vh;
-    width: 100%;
-    color: white;
-    font-size: 20px;
-    transition: all 1s;
-}
-
-.sites .major li {
-    width: 33%;
-    float: left;
-    text-align: center;
-    font-size: 22px;
-    font-weight: bold;
-    margin-top: 1vh;
+    line-height: 3vh;
+    font-size: 1.5vmax;
 }
 
 .sites a {
-    text-decoration: none;
-    color: white;
-    font-weight: lighter;
-}
-
-.sites li:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-.sites .wrapper div {
-    margin-top: 0;
-    padding-left: 5%;
-}
-
-.sites .others div {
-    float: left;
-    width: 25%;
-    margin-top: 1vh;
-}
-
-.sites .others li {
-    display: block;
-    font-weight: lighter;
-}
-
-.sites h3 {
     color: lavender;
-    font-size: 25px;
-    min-height: 10vh;
-    font-weight: normal;
+    font-weight: 300;
+}
+
+#suggest {
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 1.5vmax;
+    font-weight: 200;
+    color: lavender;
+}
+
+#sugest div {
+    width: 100%;
 }
 
 /* =============================================================================

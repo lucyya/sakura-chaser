@@ -16,216 +16,144 @@
 
   <meta name="viewport" content="width=device-width">
 
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/grid.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
   <link rel="stylesheet" href="css/map-style.css">
-
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="js/modernizr-2.6.2.min.js"></script>
+  <!-- <script src="js/scripts-map.js"></script> -->
+  <!-- <script type="text/javascript" language="javascript" src="js/map.json"></script> -->
 
 </head>
 
 <body>
 
   <header class="clearfix">
-    <img src="./img/logo.svg"> 
-    <h1>Sakura Chaser</h1>
-    <nav class="clearfix">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li id="active"><a href="map.html">Map</a></li>
-        <li>
-          <a href="attractions.html">Attractions</a>
-          <ul class="attractions">
-            <li><a href="attractions.html#tokyo">Tokyo</a></li>
-            <li><a href="attractions.html#kyoto">Kyoto</a></li>
-            <li><a href="attractions.html#osaka">Osaka</a></li>
-            <li><a href="attractions.html#lake">Other</a></li>
-          </ul>          
-        </li>
-      </ul>
+    <nav class="navbar navbar-expand-sm navbar-light bg-white clearfix m-0">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="./img/logo.svg" class="d-sm-inline-block d-none" alt="">
+        <h3 class="mr-lg-5">Sakura Chaser</h3>
+      </a>
+      <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#mainNav" aria-controls="mainNav"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse px-0" id="mainNav">
+        <ul class="navbar-nav text-center bg-white flex-sm-row w-100 mx-0 h-100 justify-content-around">
+          <li class="nav-item flex-fill">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item active flex-fill">
+            <a class="nav-link" href="map.html">Map</a>
+          </li>
+          <li class="nav-item dropdown flex-fill">
+            <a class="nav-link d-inline-flex text-right px-0" href="attractions.html">Attractions</a>
+            <a class="nav-link dropdown-toggle d-inline-flex text-left px-0" href="" id="mainNavDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+            </a>
+            <div class="dropdown-menu text-center container-fluid" aria-labelledby="mainNavDropdown">
+              <a class="dropdown-item" href="attractions.html?search=TOKYO">Tokyo</a>
+              <a class="dropdown-item" href="attractions.html?search=KYOTO">Kyoto</a>
+              <a class="dropdown-item" href="attractions.html?search=OSAKA">Osaka</a>
+            </div>
+          </li>
+        </ul>
+      </div>
     </nav>
   </header>
 
-  <div class="map clearfix">
-    <img src="./img/japan-map.svg" alt="map of Japan">
-    <div class="background">
-      <figcaption>
-        <h2>E X P L O R E &nbsp;&nbsp;&nbsp;T H E &nbsp;&nbsp;&nbsp;P E R F E C T &nbsp;&nbsp;&nbsp;P L A C E &nbsp;&nbsp;&nbsp;O N</h2>
-        <h1>Map of Japan</h1>
-      </figcaption>
-    </div>
-    <div class="icon">
-      <a href="attractions.html#lake">
+  <div class="map clearfix container-fluid">
+    <figcaption>
+      <h2>E X P L O R E &nbsp;&nbsp;&nbsp;T H E &nbsp;&nbsp;&nbsp;P E R F E C T &nbsp;&nbsp;&nbsp;P L A C E &nbsp;&nbsp;&nbsp;O N</h2>
+      <h1>Map of Japan</h1>
+    </figcaption>
+    <div class="icon d-flex flex-row-reverse">
+      <a href="attractions.html">
         <img id="sapporo" src="img/icon_bud.png">
       </a>
-      <a href="attractions.html#lake">
+      <a href="attractions.html">
         <img id="sendai" src="img/icon_bud.png">
       </a>
-      <a href="attractions.html#lake">
+      <a href="attractions.html">
         <img id="kanazawa" src="img/icon_bud.png">
       </a>
-      <a href="attractions.html#tokyo">
+      <a href="attractions.html?search=TOKYO">
         <img id="tokyo" src="img/icon_flower.png">
       </a>
-      <a href="attractions.html#lake">
+      <a href="attractions.html">
         <img id="nagoya" src="img/icon_flower.png">
       </a>
-      <a href="attractions.html#kyoto">
+      <a href="attractions.html?search=KYOTO">
         <img id="kyoto" src="img/icon_flower.png">
       </a>
-      <a href="attractions.html#osaka">
+      <a href="attractions.html?search=OSAKA">
         <img id="osaka" src="img/icon_flower.png">
       </a>
-      <a href="attractions.html#lake">
+      <a href="attractions.html">
         <img id="matsuyama" src="img/icon_flower.png">
       </a>
-      <a href="attractions.html#lake">
+      <a href="attractions.html?search=HIROSHIMA">
         <img id="hiroshima" src="img/icon_flower.png">
       </a>
-      <a href="attractions.html#lake">
+      <a href="attractions.html">
         <img id="fukuoka" src="img/icon_flower.png">
       </a>
-      <a href="attractions.html#lake">
+      <a href="attractions.html">
         <img id="naha" src="img/icon_leaf.png">
       </a>
     </div>
+    <!-- <div class="d-flex flex-row-reverse" id="name">
+    </div> -->
   </div>
 
-  <div class="sites clearfix">
-    <div class="wrapper clearfix">
-      <h1>Cherry Blossom Forecast 2018 by Region
-</h1>
-      <!-- <div class="box b1"></div>
-      <div class="box b2"></div>
-      <div class="box b3"></div>
-      <div class="box b4"></div>
-      <div class="box b5"></div> -->
-      <div class="left">
-        <p>
-          <strong>Major Cities</strong>
-        </p>
-        <ul>
-          <li><a href="attractions.html#tokyo">TOKYO</a></li>
-        </ul>
-        <p>Estimated best viewing dates: March 29 to April 4
-          <br />Blooming start prediction: March 21</p>
-        <ul>
-          <li><a href="attractions.html#kyoto">KYOTO</a></li>
-        </ul>
-        <p>Estimated best viewing dates: April 5 to April 11
-          <br />Blooming start: March 31</p>
-        <ul>
-          <li><a href="attractions.html#osaka">OSAKA</a></li>
-        </ul>
-        <p>Estimated best viewing dates: April 5 to April 11
-          <br />Blooming start: April 1st</p>
-        <p>
-          <strong>Kyushu, Shikoku and Chugoku</strong>
-        </p>
-        <ul>
-          <li><a href="attractions.html">FUKUOKA</a></li>
-        </ul>
-        <p>Estimated best viewing dates: April 1 to April 7.
-          <br />Blooming start: March 25.</p>
-        <ul>
-          <li><a href="attractions.html">KUMAMOTO</a></li>
-        </ul>
-        <p>Estimated best viewing dates: March 29 to April 5
-          <br />Blooming start: March 24</p>
-        <ul>
-          <li><a href="attractions.html">HIROSHIMA</a></li>
-        </ul>
-        <p>Estimated best viewing dates: April 4 to April 10
-          <br />Blooming start: March 27.</p>
-        <ul>
-          <li><a href="attractions.html">MATSUYAMA</a></li>
-        </ul>
-        <p>Estimated best viewing dates: April 1 to April 7
-          <br />Blooming start: March 24</p>
-        <p>
-          <strong>Kansai</strong>
-        </p>
-        <ul>
-          <li><a href="attractions.html#kyoto">KYOTO</a></li>
-        </ul>
-        <p>Estimated best viewing dates: April 5 to April 11
-          <br />Blooming start: March 31</p>
-        <ul>
-          <li><a href="attractions.html#osaka">OSAKA</a></li>
-        </ul>
-        <p>Estimated best viewing dates: April 5 to April 11
-          <br />Blooming start: April 1st</p>
-        <ul>
-          <li><a href="attractions.html">NARA</a></li>
-        </ul>
-        <p>Estimated best viewing dates: April 6 to April 12
-          <br />Blooming start: April 3</p>
+  <div class="sites clearfix container-fluid p-5">
+    <h1 class="text-center">Cherry Blossom Forecast 2018 by Region</h1>
+    <div class="mt-5">
+      <h3 class="text-center">Major Cities</h3>
+      <div class="row">
+        <div class="col-sm">
+          <a class="row" href="attractions.html#tokyo">TOKYO</a>
+          <p>Estimated best viewing dates: March 29 to April 4</p>
+          <p>Blooming start: March 21</p>
+        </div>
+        <div class="col-sm">
+          <a class="row" href="attractions.html#kyoto">KYOTO</a>
+          <p>Estimated best viewing dates: April 5 to April 11</p>
+          <p>Blooming start: March 31</p>
+        </div>
+        <div class="col-sm">
+          <a class="row" href="attractions.html#osaka">OSAKA</a>
+          <p>Estimated best viewing dates: April 5 to April 11</p>
+          <p>Blooming start: April 1st</p>
+        </div>
       </div>
-      <div class="right">
-        <p>
-          <strong>Kanto and Chubu</strong>
-        </p>
-        <ul>
-          <li><a href="attractions.html#tokyo">TOKYO</a></li>
-        </ul>
-        <p>Estimated best viewing dates: March 29 to April 4
-          <br />Blooming start prediction: March 21</p>
-        <ul>
-          <li><a href="attractions.html">NAGOYA</a></li>
-        </ul>
-        <p>Estimated best viewing dates: April 8 to April 14
-          <br />Blooming start: April 5</p>
-        <ul>
-          <li><a href="attractions.html">YOKOHAMA</a></li>
-        </ul>
-        <p>Estimated best viewing dates: April 3 to April 9
-          <br />Blooming start prediction: March 25</p>
-        <ul>
-          <li><a href="attractions.html">KANAZAWA</a></li>
-        </ul>
-        <p>Estimated best viewing dates: April 8 to April 14
-          <br />Blooming start: April 5</p>
-        <ul>
-          <li><a href="attractions.html">FUJI FIVE LAKES</a></li>
-        </ul>
-        <p>Estimated best viewing dates: March 31 to April 6.
-          <br />Blooming start: March 25.</p>
-        <p>
-          <strong>Tohoku and Hokkaido</strong>
-        </p>
-        <ul>
-          <li><a href="attractions.html">FUKUSHIMA</a></li>
-        </ul>
-        <p>Estimated best viewing dates: April 8 to April 14.
-          <br />Blooming start: April 6</p>
-        <ul>
-          <li><a href="attractions.html">SENDAI</a></li>
-        </ul>
-        <p>Estimated best viewing dates: April 7 to April 13
-          <br />Blooming start: April 7</p>
-        <ul>
-          <li><a href="attractions.html">HAKODATE</a></li>
-        </ul>
-        <p>Estimated best viewing dates: April 29 to May 4
-          <br />Blooming start: April 27</p>
-        <ul>
-          <li><a href="attractions.html">SAPPORO</a></li>
-        </ul>
-        <p>Estimated best viewing dates: May 2 to May 8
-          <br />Blooming start: May 1</p>
-      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm pl-5" id="left"></div>
+      <div class="col-sm pl-5" id="right"></div>
     </div>
   </div>
 
-  <footer>
-    <p>Copyright © 2018. All Rights Reserved.</p>
-    <a href="http://wp.nyu.edu/lucylu">Website crafted by Lucy Lu</a>
+  <footer class="clearfix container-fluid justify-content-between text-center">
+    <h1>Get your guide</h1>
+    <p>INFORMATION ABOUT CHERRY BLOSSOM UPDATE</p>
+    <form class="mt-4 clearfix">
+      <input class="form-control mx-auto mt-3" type="text" placeholder="NAME">
+      <input class="form-control mx-auto mt-3" type="email" placeholder="EMAIL">
+      <button type="submit" class="btn btn-default border-0 p-1 mt-5 mb-4">SUBSCRIBE</button>
+    </form>
+    <div class="container-fluid row ">
+      <p class="px-5 col-sm text-center text-md-left">Copyright © 2018. All Rights Reserved.</p>
+      <a class="px-5 col-sm text-center text-md-right" href="http://wp.nyu.edu/lucylu">Website crafted by Lucy Lu</a>
+    </div>
   </footer>
 
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-  <script src="js/scripts.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" rossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  <script type="text/javascript" language="javascript" src="js/map.json"></script>
+  <script src="js/scripts-map.js"></script>
 </body>
 
 </html>

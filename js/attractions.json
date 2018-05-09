@@ -1,0 +1,118 @@
+var data = {
+    "recommend" : [ 
+        {
+            "city":"tokyo",
+            "sites":[
+                {
+                    "site" : "Shinjuku Gyoen National Garden",
+                    "description" : "This beautiful park displays more than 1000 cherry trees of over a dozen varieties, including many early and late blooming trees, which makes it a good hanami option for those who miss the main season by a week or two. The spacious lawn areas create a relaxing and peaceful atmosphere. Just keep in mind that alcoholic drinks are prohibited.",
+                    "open" : "Tuesday ( 09: 00 AM ~ 04: 30 PM )<br />Wednesday ( 09: 00 AM ~ 04: 30 PM )<br />Thursday ( 09: 00 AM ~ 04: 30 PM )<br />Friday ( 09: 00 AM ~ 04: 30 PM )<br />Weekends ( 09: 00 AM ~ 04: 30 PM )",
+                    "price" : "Adult: 200 JPY <br /> Elementary and Junior high school student: 50 JPY <br /> Infant: Free",
+                    "address" : "Shinjuku Gyoen, 11 Naito-machi, Shinjuku-ku, Tokyo",
+                    "telephone" : "03-3350-0151"
+                },
+                {
+                    "site" : "Ueno Park",
+                    "description" : "This is one of the most famous (and crowded) spots for cherry blossom viewing in Japan. Holder of many sakura themed festivals and parties, Ueno Park features thousands of heavily bloomed trees along the street which leads towards the National Museum and around Shinobazu Pond. The view is breathtaking, which justify the popularity of this spot among both tourists and locals. Ueno Park's blossoms typically open 1-3 days ahead of the blossoms in other spots in the city.",
+                    "open" : "Everyday ( 05:00 AM ~ 11:00 PM )",
+                    "address":"Ueno Park, Taito-ku, Tokyo",
+                    "telephone" : "03-3828-5644",
+                    "website":"http://en.wikipedia.org/wiki/Ueno_Park"
+                },
+            ]
+        },
+        {
+            "city":"kyoto",
+            "sites":[
+                {
+                    "site": "Philosopher’s Walk",
+                    "description":"So-named for had been used for daily meditation by the influential 20th-century Japanese philosopher and Kyoto University professor Nishida Kitaro, this is a charming and romantic pedestrian path following a cherry-tree-lined canal. It connects Ginkakuji (Silver Pavilion) with the vicinity of Nanzenji. It also passes a number of temples and shrines such as Hōnen-in,  Ōtoyo Shrine, and Eikandō Zenrinji, making it very convenient spot if you are into visiting temples.",
+                    "open": "Everyday",
+                    "price":"FREE",
+                    "address": "Tetsugakunomichi Sakyo-ku Kyoto-shi, Kyoto",
+                },
+                {
+                    "site": "Maruyama Park",
+                    "description": "This is Kyoto's most popular public park for cherry blossom parties for mainly two reasons - it's gorgeous centerpiece, a large weeping cherry tree that gets lit up in the evenings, and the many food stands and temporarily constructed restaurants with tables under the trees that are available.",
+                    "open": "Everyday",
+                    "price":"FREE",
+                    "address": "円山公園,473 Maruyamacho Higashiyama-ku Kyoto-shi, Kyoto",
+                    "telephone": "075-561-1350",
+                },
+                {
+                    "site": "Arashiyama",
+                    "description": "Owner of a picturesque landscape, this pleasant and busy district on the western outskirts of Kyoto displays many cherry trees, which can be found by the Togetsukyo Bridge at the foot of Arashiyama mountains, especially in the riverside Nakanoshima Park.",
+                    "address": "Sagatenryuji Tsukurimichicho, Ukyo-ku Kyoto-shi, Kyoto",
+                    "website":"http://kyoto.travel/en/planyourvisit/course/33"
+                },
+                {
+                    "site": "Heian Shrine",
+                    "description": "The large numbers of weeping cherry trees (called yaebeni shidare) standing in the garden of Heian Shrine make it one of the best spots to see weeping cherry trees in Kyoto. The trees are located behind the shrine's main building and reach the full bloom a little after the other cherry trees, so if you missed the main season by a few days, this spot is worth the try.",
+                    "open": "Everyday ( 06:00 AM ~ 05:00 PM )",
+                    "price" : "FREE",
+                    "address": "Okazaki Nishitennocho, Sakyo-ku Kyoto-shi, Kyoto",
+                    "telephone": "075-761-0221",
+                    "website" : "http://www.jnto.go.jp/eng/location/spot/shritemp/heianjingu.html"
+                }
+            ]
+        },
+        {
+            "city":"osaka",
+            "sites":[
+                {
+                    "site": "Osaka Castle",
+                    "description": "Holder of the title of one of Japan's most famous landmarks, this iconic castle has over 4000 cherry trees planted on it spacious ground. If you are looking for a place for a picnic, a particularly nice one is Nishinomaru Park, which is located in the castle's western citadel and have wide lawns, views of the castle tower and lights up in the evening.",
+                    "open": "Everyday ( 09:00 AM ~ 05:00 PM )",
+                    "price":"Adults: 600 JPY<br />Child: FREE",
+                    "address": "Osaka Castle, 1-1 Osakajo, Chuo-ku Osaka-shi, Osaka",
+                    "telephone": "06-6941-3044",
+                    "website":"http://www.osakacastle.net/english/"
+                }
+            ]
+        },
+        {
+            "city":"lake",
+            "sites":[
+                {
+                    "site": "Lake Kawaguchiko",
+                    "description": "The combination of this iconic lake with the cherry blossom trees placed along the northern shores of it creates one of the most the magnificent sight of Mount Fuji. The two best spots to appreciate the view are the small Ubuyagasaki peninsula next to the Kawaguchiko Ohashi Bridge and the lakeside promenade around the Kawaguchiko Music Forest. For a better visibility and light conditions, visit in the early mornings.",
+                    "address": "河口湖駅, Fujikawaguchiko-machi Minamitsuru-gun, Yamanashi",
+                    "telephone": "0555-72-6700 ",
+                    "website":"http://www.fujisan.ne.jp/index_e.php"
+                }
+                
+            ]
+        },
+        {
+            "city":"nara",
+            "sites":[
+                {
+                    "site": "Nara Park",
+                    "description": "Famous for the more than a 1000 deer who runs free on it, this park is also a very popular hanami spot. There are around1700 cherry trees planted across the spacious Nara Park (which surprisingly outnumber the deer by around 500!). One of the best places in the park to make your sakura admiring picknick is the large lawn encircled by cherry trees, a short walk southeast of Todaiji's main hall.",
+                    "open": "Everyday",
+                    "price": "FREE",
+                    "address": "Nara Park, Nara, Nara Prefecture",
+                    "telephone": "0742-27-8036",
+                    "website":"http://en.wikipedia.org/wiki/Nara_Park"
+                }]
+        },
+        {
+            "city":"hiroshima",
+            "sites":[
+                {
+                    "site": "Itsukushima (Miyajima)",
+                    "description": "Known as “the island of the gods”, Miyajima is a romantic and historic island outside of Hiroshima that famous for its shrine and “floating” torii gate. The landscape gets even more fantastic when the about 1300 cherry trees located around the Itsukushima shrine and along the island's walking trails bloom.",
+                    "price": "FREE",
+                    "address": "Miyajima, Itsukushima",
+                    "telephone": "0829-44-2011",
+                    "website": "http://www.miyajima.or.jp/english/index.html"
+                }            
+            ]
+        }
+    ]
+}
+          
+        
+      
+    
+  

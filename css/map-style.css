@@ -8,21 +8,7 @@ Copyright 2013, Josh Cope
    ========================================================================== */
 @import url('https://fonts.googleapis.com/css?family=Dancing+Script:400,700|Fredericka+the+Great|IBM+Plex+Serif:400,500,600,700i');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: block;
-    visibility: hidden;
-}
-
 html, body {
-    margin: 0;
     position: relative;
     overflow-x: hidden;
 }
@@ -35,76 +21,59 @@ body {
     height: 100vh;
 }
 
-div {
-    min-height: 50px;
-}
-
-header {
-    width: 100%;
+nav {
     height: 10vh;
-    background-color: white;
+    font-size: 1vmax;
 }
 
-header img {
-    height: 9vh;
-    margin-top: -3vh;
-    margin-left: 50px;
+nav img {
+    height: 9vmin;
+    margin-left: 3vw;
 }
 
-header h1 {
+nav h3 {
     display: inline-block;
     color: plum;
-    margin: 0 1vw;
-    font-size: 50px;
-    font-weight: bold;
-    line-height: 10vh;
-}
+    margin-left: 2vw;
+    font-size: 7vmin;
+} 
 
-header nav {
-    float: right;
-    width: 40vw;
-    margin-top: 1.5vh;
-}
-
-header li {
-    display: inline-block;
-    line-height: 7.5vh;
-    width: 30%;
-    transition: all 1s;
-}
-
-header li:hover {
-    background-color: rgba(0, 0, 0, 0.15);
-}
-
-header a {
-    text-align: center;
-    display: block;
-    text-decoration: none;
+.navbar-light .navbar-nav .nav-link {
     color: orchid;
-    font-size: 20px;
+    line-height: 3vh;
 }
 
-header li:hover ul.attractions {
-    display: block;
+.navbar-light .navbar-nav .active .nav-link{
+    color: orchid;
+    line-height: 3vh;
 }
 
-header ul.attractions {
-    display: none;
-    position: absolute;
-    width: 12%;
-    z-index: 1;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    background-color: rgba(255, 255, 255, 0.9);
-}
-
-header ul.attractions li {
-    display: block;
-    width: 100%;
-}
-
-#active {
+.active {
     border-bottom: 3px solid orchid;
+}
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+    color: orchid;
+    line-height: 3vh;
+}
+
+.navbar-light .navbar-nav .show>.nav-link {
+    color: orchid;
+    line-height: 3vh;
+}
+
+.dropdown-menu {
+    min-width: 10rem;
+}
+
+.dropdown-item {
+    color: orchid;
+    transition: all 1s;
+    line-height: 3vh;
+}
+
+.dropdown-item:hover {
+    background-color: rgba(0, 0, 0, 0.15);
 }
 
 figcaption {
@@ -115,24 +84,66 @@ figcaption {
 }
 
 footer {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), transparent);
-    height: 10vh;
-    width: 100vw;
-    padding: 2vh 5%;
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    height: 50vh;
+    color: whitesmoke;
+}
+
+footer h1 {
+    font-size: 8vmin;
+    margin-top: 5vh;
+    color: lavenderblush;
 }
 
 footer p {
-    display: inline-block;
-    color: whitesmoke;
-    font-weight: lighter;
+    font-size: 1.5vmin;
+    color: lavenderblush;
+}
+
+input[type="text"], input[type="email"] {
+    height: 2.5vmax;
+    width: 20vmax;
+    background-color: transparent;
+    font-size: 2vmin;
+    color: lavenderblush;
+    box-shadow: none;
+    border: none;
+    border-bottom: 1px solid white;
+}
+
+input[type="text"]:focus, input[type="email"]:focus {
+    background-color: transparent;
+    font-size: 2.5vmin;
+    color: lavenderblush;
+}
+
+footer button {
+    height: 4vmax;
+    width: 12vmax;
+}
+
+.btn {
+    border-radius: 50px;
+    font-size: 2vmin;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: lavenderblush;
+}
+
+input[type="text"]::-webkit-input-placeholder, input[type="email"]::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: lavenderblush;
+}
+
+input[type="text"]::-moz-placeholder, input[type="email"]::-moz-placeholder { /* Firefox 19+ */
+    color: lavenderblush;
+}
+
+input[type="text"]:-ms-input-placeholder, input[type="email"]:-ms-input-placeholder { /* IE 10+ */
+    color: lavenderblush;
 }
 
 footer a {
-    float: right;
     text-decoration: none;
     color: whitesmoke;
-    font-weight: lighter;
-    line-height: 50px;
 }
 
 /* =============================================================================
@@ -141,239 +152,146 @@ footer a {
 
 .map {
     height: 90vh;
-    background: url("../img/japan-map.svg") no-repeat top 2.5vh right 4.5vw;
-    background-color: transparent;
-    background-size: cover;
-    background-size: 65vh;
-}
-
-.map img {
-    height: 85vh;
-    position: absolute;
-    right: 5vw;
-    top: 12.5vh;
-}
-
-.map .background {
-    height: 90vh;
-    padding: 2% 5%;
-    display: block;
-    background-image: linear-gradient(to right, rgba(255,255,255,0.2), transparent, rgba(0,0,0,0.2));
+    background:  linear-gradient(to right, rgba(255,255,255,0.2), transparent, rgba(0,0,0,0.2)) top center,url("../img/japan-map.svg") bottom right 0.5vw no-repeat;
 }
 
 .map figcaption {
-    height: 100%;
-    width: 100%;
+    padding: 10vh 11vw;
     background-image: linear-gradient(to right, darkviolet, hotpink);
-    position: relative;
-    z-index: 5;
 }
 
 .map h2 {
-    margin-top: 20vh;
-    font-size: 30px;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
-    background-clip: text;
+    font-size: 3.5vmin;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
 }
 
 .map h1 {
-    font-size: 150px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
-    background-clip: text;
+    font-size: 8vmax;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
-    margin-top: -1%;
+    margin-top: -1vh;
 }
 
 .map .icon {
-    height: 85vh;
-    width: 70vh;
     position: absolute;
-    right: 5vw;
-    top: 12.5vh;
+    min-width: 320px;
+    right: 0;
+    bottom: 0;
     z-index: 5;
-}
-
-.map a {
-    text-decoration: none;
 }
 
 .map div img {
     position: relative;
-    height: 4vh;
+    height: 5vmin;
 }
 
+/* #name {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 5;
+}
+
+#name p {
+    position: relative;
+    color: lavender;
+    background-color: rgba(0, 0, 0, 0.4);
+    line-height: 4vh;
+    width: 5vw;
+    font-size: 2vmin;
+} */
+
 #sapporo {
-    top: 14vh;
-    left: 50vh;
+    bottom: 70vmin;
+    right: 17vmin;
 }
 
 #sendai {
-    top: 41vh;
-    left: 46vh;
+    bottom: 43vmin;
+    right: 11vmin;
 }
 
 #kanazawa {
-    top: 51vh;
-    left: 26vh;
+    bottom: 31vmin;
+    right: 23vmin;
 }
 
 #tokyo {
-    top: 52vh;
-    left: 36vh;
+    bottom: 29vmin;
+    right: 3vmin;
 }
 
 #nagoya {
-    top: 57vh;
-    left: 20vh;
+    bottom: 25vmin;
+    right: 10vmin;
 }
 
 #kyoto {
-    top: 59vh;
-    left: 11vh;
+    bottom: 23vmin;
+    right: 9vmin;
 }
 
 #osaka {
-    top: 62vh;
-    left: 3vh;
+    bottom: 20vmin;
+    right: 8vmin;
 }
 
 #matsuyama {
-    top: 69vh;
-    left: -13vh;
+    bottom: 13vmin;
+    right: 15vmin;
 }
 
 #hiroshima {
-    top: 65vh;
-    left: -20vh;
+    bottom: 19vmin;
+    right: 11vmin;
 }
 
 #fukuoka {
-    top: 69vh;
-    left: -32vh;
+    bottom: 12vmin;
+    right: 15vmin;
 }
 
 #naha {
-    top: 82vh;
-    left: 23vh;
+    left: 50vmin;
 }
 
 .sites {
-    height: 200vh;
     background-color: whitesmoke;
-    padding: 5% 10%;
 }
 
 .sites h1 {
     color: black;
     font-family: 'IBM Plex Serif', serif;
-    text-align: center;
-    font-size: 50px;
+    font-size: 6vmin;
 }
 
-.sites p strong {
+.sites h3 {
     color: plum;
-    text-align: left;
-    display: inline-block;
     font-size: 30px;
-    font-weight: bold;
-    margin-top: 2vh;
 }
 
+.sites a {
+    text-decoration: none;
+    color: black;
+    padding: 1vh 1vw;
+    font-size: 22px;
+    transition: all 1s;
+}
+
+.sites a:hover {
+    background-color: rgba(255, 240, 245, 0.8);
+}
+
+.sites p {
+    font-size: 16px;
+}
+
+/* 
 .sites .left,
 .sites .right {
     float: left;
     width: 50%;
 }
 
-.sites li {
-    text-align: left;
-    display: inline-block;
-    line-height: 40px;
-    width: 100%;
-    font-size: 22px;
-    display:list-item;
-    list-style-position: inside;    
-    list-style-type: initial;
-    transition: all 1s;
-    color: black;
-}
-
-.sites a{
-    text-decoration: none;
-    color: black;
-}
-
-.sites p {
-    color: black;
-    font-size: 16px;
-}
-
-.sites .major li {
-    width: 30%;
-    text-align: center;
-    font-size: 22px;
-}
-
-.sites li:hover {
-    background-color: rgba(0, 0, 0, 0.3);
-}
-
-.sites .wrapper div {
-    margin-top: 0;
-    padding-left: 5%;
-}
-
-/* .sites .box {
-    position: absolute;
-    transform: rotate(45deg);
-    border: 1px solid black;
-}
-
-.sites .b1 {
-    width: 60vh;
-    height: 60vh;
-    top: 70vh;
-    right: 5vw;
-    background-color: lavenderblush;
-}
-
-.sites .b2 {
-    width: 60vh;
-    height: 60vh;
-    top: 178vh;
-    left: 1vw;
-    background-color: lavenderblush;
-}
-
-.sites .b3 {
-    width: 75vh;
-    height: 75vh;
-    top: 150vh;
-    right: -5vw;
-    background-color: thistle;
-}
-
-.sites .b4 {
-    width: 75vh;
-    height: 75vh;
-    top: 204vh;
-    right: 25vw;
-    background-color: thistle;
-}
-
-.sites .b5 {
-    width: 90vh;
-    height: 90vh;
-    top: 99vh;
-    left: 17vw;
-    background-color: aliceblue;
-} */
 
 
 /* =============================================================================

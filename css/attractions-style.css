@@ -7,21 +7,7 @@ Copyright 2013, Josh Cope
    Site Styles
    ========================================================================== */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: block;
-    visibility: hidden;
-}
-
 html, body {
-    margin: 0;
     position: relative;
     overflow-x: hidden;
 }
@@ -34,76 +20,59 @@ body {
     height: 100vh;
 }
 
-div {
-    min-height: 50px;
-}
-
-header {
-    width: 100%;
+nav {
     height: 10vh;
-    background-color: white;
+    font-size: 1vmax;
 }
 
-header img {
-    height: 9vh;
-    margin-top: -3vh;
-    margin-left: 50px;
+nav img {
+    height: 9vmin;
+    margin-left: 3vw;
 }
 
-header h1 {
+nav h3 {
     display: inline-block;
     color: plum;
-    margin: 0 1vw;
-    font-size: 50px;
-    font-weight: bold;
-    line-height: 10vh;
-}
+    margin-left: 2vw;
+    font-size: 7vmin;
+} 
 
-header nav {
-    float: right;
-    width: 40vw;
-    margin-top: 1.5vh;
-}
-
-header li {
-    display: inline-block;
-    line-height: 7.5vh;
-    width: 30%;
-    transition: all 1s;
-}
-
-header li:hover {
-    background-color: rgba(0, 0, 0, 0.15);
-}
-
-header a {
-    text-align: center;
-    display: block;
-    text-decoration: none;
+.navbar-light .navbar-nav .nav-link {
     color: orchid;
-    font-size: 20px;
+    line-height: 3vh;
 }
 
-header li:hover ul.attractions {
-    display: block;
+.navbar-light .navbar-nav .active .nav-link{
+    color: orchid;
+    line-height: 3vh;
 }
 
-header ul.attractions {
-    display: none;
-    position: absolute;
-    width: 12%;
-    z-index: 1;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    background-color: rgba(255, 255, 255, 0.9);
-}
-
-header ul.attractions li {
-    display: block;
-    width: 100%;
-}
-
-#active {
+.active {
     border-bottom: 3px solid orchid;
+}
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+    color: orchid;
+    line-height: 3vh;
+}
+
+.navbar-light .navbar-nav .show>.nav-link {
+    color: orchid;
+    line-height: 3vh;
+}
+
+.dropdown-menu {
+    min-width: 10rem;
+}
+
+.dropdown-item {
+    color: orchid;
+    transition: all 1s;
+    line-height: 3vh;
+}
+
+.dropdown-item:hover {
+    background-color: rgba(0, 0, 0, 0.15);
 }
 
 figcaption {
@@ -114,26 +83,67 @@ figcaption {
 }
 
 footer {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), transparent);
-    height: 10vh;
-    width: 100vw;
-    padding: 2vh 5%;
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    height: 50vh;
+    color: whitesmoke;
+}
+
+footer h1 {
+    font-size: 8vmin;
+    margin-top: 5vh;
+    color: lavenderblush;
 }
 
 footer p {
-    display: inline-block;
-    color: whitesmoke;
-    font-weight: lighter;
+    font-size: 1.5vmin;
+    color: lavenderblush;
+}
+
+input[type="text"], input[type="email"] {
+    height: 2.5vmax;
+    width: 20vmax;
+    background-color: transparent;
+    font-size: 2vmin;
+    color: lavenderblush;
+    box-shadow: none;
+    border: none;
+    border-bottom: 1px solid white;
+}
+
+input[type="text"]:focus, input[type="email"]:focus {
+    background-color: transparent;
+    font-size: 2.5vmin;
+    color: lavenderblush;
+}
+
+footer button {
+    height: 4vmax;
+    width: 12vmax;
+}
+
+.btn {
+    border-radius: 50px;
+    font-size: 2vmin;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: lavenderblush;
+}
+
+input[type="text"]::-webkit-input-placeholder, input[type="email"]::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: lavenderblush;
+}
+
+input[type="text"]::-moz-placeholder, input[type="email"]::-moz-placeholder { /* Firefox 19+ */
+    color: lavenderblush;
+}
+
+input[type="text"]:-ms-input-placeholder, input[type="email"]:-ms-input-placeholder { /* IE 10+ */
+    color: lavenderblush;
 }
 
 footer a {
-    float: right;
     text-decoration: none;
     color: whitesmoke;
-    font-weight: lighter;
-    line-height: 50px;
 }
-
 /* =============================================================================
    Page Styles
    ========================================================================== */
@@ -141,27 +151,17 @@ footer a {
 .landing {
     height: 90vh;
     background: url("../img/attractions.jpg") no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+    background-size: cover;
 }
 
 .landing figcaption {
     background-image: url("../img/map-1.jpg");
     padding-top: 55vh;
-    text-align: center;
-}
-
-.landing figcaption:before,
-.landing figcaption:after {
-    position: absolute;
-    content: '';
 }
 
 .landing h2 {
-    font-size: 50px;
-    text-align: right;
-    margin-right: 10%;
+    font-size: 6vmin;
+    margin-right: 8vw;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
@@ -169,154 +169,81 @@ footer a {
 }
 
 .landing h1 {
-    font-size: 150px;
-    text-align: right;
-    margin-right: 10%;
-    font-family: Arial, Helvetica, sans-serif, cursive;
-    margin-top: -50px;
+    font-size: 10vmax;
+    margin-right: 8vw;
+    margin-top: -2vh;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
     background-clip: text;
 }
 
-.landing h3 {
-    font-size: 40px;
-    font-weight: normal;
-    margin-top: 1%;
-    padding-bottom: 1%;
-    -webkit-text-fill-color: rgba(0, 0, 0, 0.2);
-}
-
 .sites {
-    background: url("../img/map.jpg") no-repeat bottom center;
+    background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.3)), url("../img/map-1.jpg") no-repeat bottom center;
     background-size: cover;
     height: 100vh;
 }
 
-.sites .wrapper {
-    height: 100vh;
-    padding: 2% 5%;
-    display: block;
-    background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.3))
-}
-
 .sites h2 {
     color: lavenderblush;
-    text-align: right;
-    margin-top: 5%;
-    font-size: 35px;
+    margin-top: 10vh;
+    font-size: 4.5vmin;
 }
 
 .sites h1 {
     color: lavenderblush;
-    text-align: right;
-    font-size: 100px;
-    margin-top: -2%;
+    font-size: 7vmax;
+    margin-top: -1vh;
 }
 
-.sites .major h2,
-.sites .others h2 {
-    color: lavenderblush;
-    text-align: left;
-    margin-top: 30px;
+#map {
+    height: 50vh;
 }
 
-.sites ul {
-    margin-top: 10%;
-    /* border: 1px solid black; */
-}
-
-.sites li {
-    display: inline-block;
-    line-height: 100px;
-    width: 100%;
-    /* color: lavender; */
-    font-size: 30px;
+.sites div a, .sites div div{
+    /* line-height: 5vh; */
+    font-size: 4vmin;
     transition: all 1s;
-}
-
-.sites .major li {
-    width: 49%;
-    text-align: center;
-    font-size: 30px;
-}
-
-.sites a {
     text-decoration: none;
     color: lavender;
 }
 
-.sites li:hover {
+.sites a:hover {
     background-color: rgba(0, 0, 0, 0.3);
 }
 
-.sites .wrapper div {
-    margin-top: 0;
-    padding-left: 5%;
-}
-
-.sites .others div {
-    float: left;
-    width: 25%;
-    margin-top: 20px;
-}
-
-.sites .others li {
-    display: block;
-}
-
-.sites h3 {
-    color: lavender;
-    font-size: 25px;
-    height: 80px;
-}
-
 .site {
-    height: 100vh;
-    display: block;
     background: url("../img/attractions.jpg") no-repeat top center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: 100% 100vh;
+    background-size: cover;
     color: white;
-    padding: 5% 10%;
+    padding: 5vh 5vw;
+    min-height: 100vh;
+}
+
+.site.odd {
+    background: rgba(0, 0, 0, 0.3);
 }
 
 .site.even {
     color: black;
-    background: linear-gradient(white, white);
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: 100% 100vh;
+    background: white;
 }
 
 .site h2 {
     color: lavenderblush;
     text-align: center;
-    font-size: 50px;
-    line-height: 100px;
-}
-
-.site.odd h2 {
-    background-color: rgba(0, 0, 0, 0.5);
-    height: 95%;
-    display: block;
+    font-size: 4vmax;
+    line-height: 10vh;
+    /* min-height: 90vh; */
 }
 
 .site.even h2 {
     color: rebeccapurple;
-    background-color: rgba(221, 160, 221, 0.1);
-    height: 95%;
 }
 
 .site p {
-    font-size: 20px;
-    padding: 1% 5%;
-    display: block;
-    margin-top: -43%;
+    font-size: 2.5vmin;
+    padding: 2vh 5vw;
 }
 
 
@@ -324,18 +251,16 @@ footer a {
     border-collapse: collapse;
     text-align: center;
     border: 3px solid plum;
-    font-size: 18px;
+    font-size: 2.3vmin;
 }
 
 .site table {
-    width: 90%;
-    margin-left: 5%;
-    margin-top: 3%;
-    /* height: 250px; */
+    width: 80vw;
+    margin: 3vh 5vw;
 }
 
 .site th, td {
-    height: 40px;
+    height: 5vh;
 }
 
 .site a {
@@ -355,12 +280,7 @@ footer a {
    ========================================================================== */
 
 /* Tablet Portrait size to Base 996px */
-@media only screen and (min-width: 768px) and (max-width: 995px) {
-
-
-
-
-}
+@media only screen and (min-width: 768px) and (max-width: 995px) {}
 
 /* All Mobile Sizes */
 @media only screen and (max-width: 767px) {}

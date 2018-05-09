@@ -16,12 +16,9 @@
 
   <meta name="viewport" content="width=device-width">
 
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
   <link rel="stylesheet" href="css/attractions-style.css">
-
-
   <script src="js/modernizr-2.6.2.min.js"></script>
 
 </head>
@@ -29,391 +26,88 @@
 <body>
 
   <header class="clearfix">
-    <img src="./img/logo.svg"> 
-    <h1>Sakura Chaser</h1>
-    <nav class="clearfix">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="map.html">Map</a></li>
-        <li id="active">
-          <a href="attractions.html">Attractions</a>
-          <ul class="attractions">
-            <li><a href="attractions.html#tokyo">Tokyo</a></li>
-            <li><a href="attractions.html#kyoto">Kyoto</a></li>
-            <li><a href="attractions.html#osaka">Osaka</a></li>
-            <li><a href="attractions.html#lake">Other</a></li>
-          </ul>          
-        </li>
-      </ul>
+    <nav class="navbar navbar-expand-sm navbar-light bg-white clearfix m-0">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="./img/logo.svg" class="d-sm-inline-block d-none" alt="">
+        <h3 class="mr-lg-5">Sakura Chaser</h3>
+      </a>
+      <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#mainNav" aria-controls="mainNav"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse px-0" id="mainNav">
+        <ul class="navbar-nav text-center bg-white flex-sm-row w-100 mx-0 h-100 justify-content-around">
+          <li class="nav-item flex-fill">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item flex-fill">
+            <a class="nav-link" href="map.html">Map</a>
+          </li>
+          <li class="nav-item dropdown active flex-fill">
+            <a class="nav-link d-inline-flex text-right px-0" href="attractions.html">Attractions</a>
+            <a class="nav-link dropdown-toggle d-inline-flex text-left px-0" href="" id="mainNavDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+            </a>
+            <div class="dropdown-menu text-center container-fluid" aria-labelledby="mainNavDropdown">
+              <a class="dropdown-item" href="attractions.html?search=TOKYO">Tokyo</a>
+              <a class="dropdown-item" href="attractions.html?search=KYOTO">Kyoto</a>
+              <a class="dropdown-item" href="attractions.html?search=OSAKA">Osaka</a>
+            </div>
+          </li>
+        </ul>
+      </div>
     </nav>
   </header>
 
-  <div class="landing clearfix">
-    <figcaption>
+  <div class="landing clearfix container-fluid">
+    <figcaption class="text-sm-right text-center">
       <h2>CHASE THE CHERRY</h2>
       <h1>Top 10 Spots</h1>
     </figcaption>
   </div>
 
-  <div class="sites clearfix">
-    <div class="wrapper">
-      <h2>CHERRY BLOSSOME SEASON</h2>
-      <h1>Major Tourist Cities</h1>
-      <div class="major">
-        <ul>
-          <li>
-            <a href="#tokyo">TOKYO</a>
-          </li>
-          <li>
-            <a href="#lake">FIVE FUJI LAKES</a>
-          </li>
-          <li>
-            <a href="#kyoto">KYOTO</a>
-          </li>
-          <li>
-            <a href="#osaka">OSAKA</a>
-          </li>
-          <li>
-            <a href="#nara">NARA</a>
-          </li>
-          <li>
-            <a href="#hiroshima">HIROSHIMA</a>
-          </li>
-        </ul>
+  <div class="sites clearfix container-fluid text-center">
+    <h2 class="text-left pl-5">CHERRY BLOSSOME SEASON</h2>
+    <h1 class="text-left pl-5">Major Tourist Cities</h1>
+    <div class="row p-5">
+      <div id="map" class="col-sm-8 px-5 d-none d-sm-block"></div>
+      <div class="col-sm-4 px-5 text-left" id="siteLink">
+        <a class="row my-3" href="#tokyo">TOKYO</a>
+        <a class="row my-3" href="#lake">FIVE FUJI LAKES</a>
+        <a class="row my-3" href="#kyoto">KYOTO</a>
+        <a class="row my-3" href="#osaka">OSAKA</a>
+        <a class="row my-3" href="#nara">NARA</a>
+        <a class="row my-3" href="#hiroshima">HIROSHIMA</a>
       </div>
     </div>
   </div>
 
-  <div>
-    <div class="site tokyo odd clearfix" id="tokyo">
-      <h2>Shinjuku Gyoen National Garden</h2>
-      <p>
-        This beautiful park displays more than 1000 cherry trees of over a dozen varieties, including many early and late blooming
-        trees, which makes it a good hanami option for those who miss the main season by a week or two. The spacious lawn areas
-        create a relaxing and peaceful atmosphere. Just keep in mind that alcoholic drinks are prohibited.
-      </p>
-      <table>
-        <tbody>
-          <tr>
-            <td> Business Hours </td>
-            <td> Tuesday ( 09:00 AM ~ 04:30 PM )
-              <br />Wednesday ( 09:00 AM ~ 04:30 PM )
-              <br />Thursday ( 09:00 AM ~ 04:30 PM )
-              <br />Friday ( 09:00 AM ~ 04:30 PM )
-              <br />Weekends ( 09:00 AM ~ 04:30 PM )
-            </td>
-          </tr>
-          <tr>
-            <td> Price </td>
-            <td> Adult: 200 JPY
-                <br /> Elementary and Junior high school student: 50 JPY
-                <br /> Infant: Free
-            </td>
-          </tr>
-          <tr>
-            <td> Address </td>
-            <td class="info-address"> Shinjuku Gyoen, 11 Naito-machi, Shinjuku-ku, Tokyo</td>
-          </tr>
-          <tr>
-            <td> Telephone </td>
-            <td> 03-3350-0151 </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="site tokyo even clearfix">
-      <h2>Ueno Park</h2>
-      <p>
-        This is one of the most famous (and crowded) spots for cherry blossom viewing in Japan. Holder of many sakura themed festivals
-        and parties, Ueno Park features thousands of heavily bloomed trees along the street which leads towards the National Museum
-        and around Shinobazu Pond. The view is breathtaking, which justify the popularity of this spot among both tourists and
-        locals. Ueno Park's blossoms typically open 1-3 days ahead of the blossoms in other spots in the city.
-      </p>
-      <table>
-        <tbody>
-          <tr>
-            <td> Business Hours </td>
-            <td> Everyday ( 05:00 AM ~ 11:00 PM ) </td>
-          </tr>
-          <tr>
-            <td> Address </td>
-            <td class="info-address"> Ueno Park, Taito-ku, Tokyo
-            </td>
-          </tr>
-          <tr>
-            <td> Telephone </td>
-            <td> 03-3828-5644 </td>
-          </tr>
-          <tr>
-            <td> Website </td>
-            <td>
-              <a href="http://en.wikipedia.org/wiki/Ueno_Park" target="_blank" rel="nofollow">http://en.wikipedia.org/wiki/Ueno_Park</a>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="site kyoto odd clearfix" id="kyoto">
-      <h2>Philosopher’s Walk</h2>
-      <p>
-        So-named for had been used for daily meditation by the influential 20th-century Japanese philosopher and Kyoto University
-        professor Nishida Kitaro, this is a charming and romantic pedestrian path following a cherry-tree-lined canal. It connects
-        Ginkakuji (Silver Pavilion) with the vicinity of Nanzenji. It also passes a number of temples and shrines such as Hōnen-in,
-        Ōtoyo Shrine, and Eikandō Zenrinji, making it very convenient spot if you are into visiting temples.
-      </p>
-      <table>
-        <tbody>
-          <tr>
-            <td> Business Hours </td>
-            <td> Everyday </td>
-          </tr>
-          <tr>
-            <td> Price </td>
-            <td> FREE </td>
-          </tr>
-          <tr>
-            <td> Address </td>
-            <td class="info-address"> Tetsugakunomichi Sakyo-ku Kyoto-shi, Kyoto
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="site kyoto even clearfix">
-      <h2>Maruyama Park</h2>
-      <p>
-        This is Kyoto's most popular public park for cherry blossom parties for mainly two reasons - it's gorgeous centerpiece, a
-        large weeping cherry tree that gets lit up in the evenings, and the many food stands and temporarily constructed restaurants
-        with tables under the trees that are available.
-      </p>
-      <table>
-        <tbody>
-          <tr>
-            <td> Business Hours </td>
-            <td> Everyday </td>
-          </tr>
-          <tr>
-            <td> Price </td>
-            <td> FREE </td>
-          </tr>
-          <tr>
-            <td> Address </td>
-            <td class="info-address"> 円山公園,473 Maruyamacho Higashiyama-ku Kyoto-shi, Kyoto
-            </td>
-          </tr>
-          <tr>
-            <td> Telephone </td>
-            <td> 075-561-1350 </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    
-    <div class="site kyoto odd clearfix">
-      <h2>Arashiyama</h2>
-      <p>
-        Owner of a picturesque landscape, this pleasant and busy district on the western outskirts of Kyoto displays many cherry
-        trees, which can be found by the Togetsukyo Bridge at the foot of Arashiyama mountains, especially in the riverside Nakanoshima
-        Park.
-      </p>
-      <table>
-        <tbody>
-          <tr>
-            <td> Address </td>
-            <td class="info-address"> Sagatenryuji Tsukurimichicho, Ukyo-ku Kyoto-shi, Kyoto
-            </td>
-          </tr>
-          <tr>
-            <td> Website </td>
-            <td>
-              <a href="http://kyoto.travel/en/planyourvisit/course/33" target="_blank" rel="nofollow">http://kyoto.travel/en/planyourvisit/course/33</a>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    
-    <div class="site kyoto even clearfix">
-      <h2>Heian Shrine</h2>
-      <p>
-        The large numbers of weeping cherry trees (called yaebeni shidare) standing in the garden of Heian Shrine make it one of
-        the best spots to see weeping cherry trees in Kyoto. The trees are located behind the shrine's main building and reach
-        the full bloom a little after the other cherry trees, so if you missed the main season by a few days, this spot is worth
-        the try.
-      </p>
-      <table>
-        <tbody>
-          <tr>
-            <td> Business Hours </td>
-            <td> Everyday ( 06:00 AM ~ 05:00 PM ) </td>
-          </tr>
-          <tr>
-            <td> Price </td>
-            <td> FREE </td>
-          </tr>
-          <tr>
-            <td> Address </td>
-            <td class="info-address"> Okazaki Nishitennocho, Sakyo-ku Kyoto-shi, Kyoto
-            </td>
-          </tr>
-          <tr>
-            <td> Telephone </td>
-            <td> 075-761-0221 </td>
-          </tr>
-          <tr>
-            <td> Website </td>
-            <td>
-              <a href="http://www.jnto.go.jp/eng/location/spot/shritemp/heianjingu.html" target="_blank" rel="nofollow">http://www.jnto.go.jp/eng/location/spot/shritemp/heianjingu.html</a>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    
-    <div class="site osaka odd clearfix" id="osaka">
-      <h2>Osaka Castle</h2>
-      <p>
-        Holder of the title of one of Japan's most famous landmarks, this iconic castle has over 4000 cherry trees planted on it
-        spacious ground. If you are looking for a place for a picnic, a particularly nice one is Nishinomaru Park, which is located
-        in the castle's western citadel and have wide lawns, views of the castle tower and lights up in the evening.
-      </p>
-      <table>
-        <tbody>
-          <tr>
-            <td> Business Hours </td>
-            <td> Everyday ( 09:00 AM ~ 05:00 PM ) </td>
-          </tr>
-          <tr>
-            <td> Price </td>
-            <td> Adults: 600 JPY
-              <br />Child: FREE </td>
-          </tr>
-          <tr>
-            <td> Address </td>
-            <td class="info-address"> Osaka Castle, 1-1 Osakajo, Chuo-ku Osaka-shi, Osaka
-            </td>
-          </tr>
-          <tr>
-            <td> Telephone </td>
-            <td> 06-6941-3044 </td>
-          </tr>
-          <tr>
-            <td> Website </td>
-            <td>
-              <a href="http://www.osakacastle.net/english/" target="_blank" rel="nofollow">http://www.osakacastle.net/english/</a>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="site lake even clearfix" id="lake">
-      <h2>Lake Kawaguchiko</h2>
-      <p>
-        The combination of this iconic lake with the cherry blossom trees placed along the northern shores of it creates one of the
-        most the magnificent sight of Mount Fuji. The two best spots to appreciate the view are the small Ubuyagasaki peninsula
-        next to the Kawaguchiko Ohashi Bridge and the lakeside promenade around the Kawaguchiko Music Forest. For a better visibility
-        and light conditions, visit in the early mornings.
-      </p>
-      <table>
-        <tbody>
-          <tr>
-            <td> Address </td>
-            <td class="info-address"> 河口湖駅, Fujikawaguchiko-machi Minamitsuru-gun, Yamanashi</td>
-          </tr>
-          <tr>
-            <td> Telephone </td>
-            <td> 0555-72-6700 </td>
-          </tr>
-          <tr>
-            <td> Website </td>
-            <td>
-              <a href="http://www.fujisan.ne.jp/index_e.php" target="_blank" rel="nofollow">http://www.fujisan.ne.jp/index_e.php</a>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="site nara odd clearfix" id="nara">
-      <h2>Nara Park</h2>
-      <p>
-        Famous for the more than a 1000 deer who runs free on it, this park is also a very popular hanami spot. There are around
-        1700 cherry trees planted across the spacious Nara Park (which surprisingly outnumber the deer by around 500!). One of
-        the best places in the park to make your sakura admiring picknick is the large lawn encircled by cherry trees, a short
-        walk southeast of Todaiji's main hall.
-      </p>
-      <table>
-        <tbody>
-          <tr>
-            <td> Business Hours </td>
-            <td> Everyday </td>
-          </tr>
-          <tr>
-            <td> Price </td>
-            <td> FREE </td>
-          </tr>
-          <tr>
-            <td> Address </td>
-            <td class="info-address"> Nara Park, Nara, Nara Prefecture
-            </td>
-          </tr>
-          <tr>
-            <td> Telephone </td>
-            <td> 0742-27-8036 </td>
-          </tr>
-          <tr>
-            <td> Website </td>
-            <td>
-              <a href="http://en.wikipedia.org/wiki/Nara_Park" target="_blank" rel="nofollow">http://en.wikipedia.org/wiki/Nara_Park</a>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    
-    <div class="site hiroshima even clearfix" id="hiroshima">
-      <h2>Itsukushima (Miyajima)</h2>
-      <p>
-        Known as “the island of the gods”, Miyajima is a romantic and historic island outside of Hiroshima that famous for its shrine
-        and "floating" torii gate. The landscape gets even more fantastic when the about 1300 cherry trees located around the Itsukushima
-        shrine and along the island's walking trails bloom.
-      </p>
-      <table>
-        <tbody>
-          <tr>
-            <td> Price </td>
-            <td> FREE </td>
-          </tr>
-          <tr>
-            <td> Address </td>
-            <td class="info-address"> Miyajima, Itsukushima
-            </td>
-          </tr>
-          <tr>
-            <td> Telephone </td>
-            <td> 0829-44-2011 </td>
-          </tr>
-          <tr>
-            <td> Website </td>
-            <td>
-              <a href="http://www.miyajima.or.jp/english/index.html" target="_blank" rel="nofollow">http://www.miyajima.or.jp/english/index.html</a>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+  <div class="clearfix container-fluid p-0" id="recommend">
   </div>
 
-  <footer>
-    <p>Copyright © 2018. All Rights Reserved.</p>
-    <a href="http://wp.nyu.edu/lucylu">Website crafted by Lucy Lu</a>
+  <footer class="clearfix container-fluid justify-content-between text-center">
+    <h1>Get your guide</h1>
+    <p>INFORMATION ABOUT CHERRY BLOSSOM UPDATE</p>
+    <form class="mt-4 clearfix">
+      <input class="form-control mx-auto mt-3" type="text" placeholder="NAME">
+      <input class="form-control mx-auto mt-3" type="email" placeholder="EMAIL">
+      <button type="submit" class="btn btn-default border-0 p-1 mt-5 mb-4">SUBSCRIBE</button>
+    </form>
+    <div class="container-fluid row ">
+      <p class="px-5 col-sm text-center text-md-left">Copyright © 2018. All Rights Reserved.</p>
+      <a class="px-5 col-sm text-center text-md-right" href="http://wp.nyu.edu/lucylu">Website crafted by Lucy Lu</a>
+    </div>
   </footer>
 
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-  <script src="js/scripts.js"></script>
+  <script type="text/javascript" language="javascript" src="js/attractions.json"></script>
+  <script src="js/scripts-attractions.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwHa6a92mVyTuKAzKYJsDYs1o4utj-Snk&callback=initMap">
+  </script>
 </body>
 
 </html>
