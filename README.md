@@ -33,14 +33,36 @@ A Japanese cherry blossom guide website
     	* rearrange the structure and recolor the text
     * attractions page
     	* change the background photo
-* TODOs:
-	* CSS:
-		* change the fonts
-		* add subscribe block on index page
-		* modify the layout of blocks of contents in map and attraction pages
-		* add flower blooming animation / series of images
-		* add search box for recommend places and sites and remove redundant content after using JavaScript
-    * JavaScript:
-    	*  add a scroll bar for timeline
-    	*  add scrollify effect
-    	*  display content according to search terms
+
+### v2.0 - more responsive and functional
+* release time: 2018.05.09
+* modify the website layouts to be responsive with Bootstrap
+	* overall
+		* add subscription part on the bottom of each page
+		* rewrite the header navigation bar to be responsive with "hamburger" icon in mobile size
+		* modify the CSS and add Bootstrap classes to be responsive
+	* index page
+		* at the bottom part, change the redundant sites and links to a search box
+	* attractions page
+		* add a google map to show all the places mentioned
+* add JavaScript funtions
+	* index page
+		* add an auto-suggest function for the search box (enables arrow keys and mouse clicks)
+	* map page
+		* create a JSON file for cherry blossom data by sites
+		* add a function to automatically load JSON data to map page
+	* attraction page
+		* create a JSON file for information of recommend sites
+		* add a function to automatically load JSON data to attraction page based on desired site from link
+		* add a function to show mentioned places on google map
+
+### TODOs:
+* CSS:
+	* change the fonts
+	* add flower blooming animation / series of images
+	* modify the site icons to be responsive on map page
+* JavaScript:
+	*  add a scroll bar for timeline
+	*  add scrollify effect
+* Other:
+	* get more data from other websites, and update the contents automatically
